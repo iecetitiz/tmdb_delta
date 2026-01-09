@@ -30,7 +30,7 @@ with DAG('tmdb_dag2', default_args=default_args, schedule='@daily', catchup=Fals
 
     /opt/spark/bin/spark-submit \
       --packages io.delta:delta-spark_2.12:3.1.0 \
-      /opt/dataops-jobs/tmdb/crew.py
+      /dataops/crew.py
     """,
     conn_timeout=300, cmd_timeout=300,
     ssh_conn_id='spark_ssh_conn')
